@@ -9,7 +9,7 @@
 	</supportedVersions>
     <url>https://ludeon.com/forums/index.php?topic=48126.0</url>
 	<description>
-	    [v0.7e]
+	    [v0.83 Patch #3]
         A true implementation of vehicles into RimWorld!
     
         First off, a big thank you to Jecrell and Neronix, without him none of you would have this!
@@ -26,7 +26,7 @@
         Just like any partially oiled machine, youll have to fill and power it with Chemfuel! (not included)
     
         Upon assigning a driver, you must instruct the vehicle to draft itself for glorious duty.
-    
+		
         ==Notes and Help==
     
         - If your goal is caravanning, please put a driver at least with good mood and no needs.
@@ -38,12 +38,7 @@
 		
 		==Version changelog==
 		
-		- Added vehicle fuel gauge.
-		- Added variety of weapon quality.
-		- Added specialDisplayRadius for weapons.
-		- Changed weapon ranges depending either CE is installed or not.
-		- Patched some weaponTags.
-		- Fixed bug: JobDriver error when building weapon above "good" quality.		
+		- Updated the armor values as per change of Combat Extended.
 		
     </description>
 </ModMetaData>

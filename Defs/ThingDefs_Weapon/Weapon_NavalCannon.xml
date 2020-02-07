@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Specific gun bases, important to alocate graphics -->
-	<ThingDef Name="Tank_CannonBase" ParentName="O21Vehicle_GunBase" Abstract="True">
+	<ThingDef Name="Naval_CannonBase" ParentName="O21Vehicle_GunBase" Abstract="True">
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
@@ -20,7 +20,7 @@
 					<li>Tank</li>
 				</allowedToInstallOn>
 				<installedWeaponGraphic>
-					<texPath>Weps/Turrets/Tank_Cannon</texPath>
+					<texPath>Weps/Turrets/Naval_Cannon</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>6</drawSize>
 					<shaderType>TransparentPostLight</shaderType>
@@ -36,10 +36,10 @@
 	</ThingDef>
 	
 	<!-- actual Gun defs -->
-	<ThingDef ParentName="Tank_CannonBase">
-		<defName>Tank_Cannon</defName>
-		<label>Tank cannon</label>
-		<description>A powerful cannon for use on a tank, capable of sending exploding shells accurately at the enemy.</description>
+	<ThingDef ParentName="Naval_CannonBase">
+		<defName>Naval_Cannon</defName>
+		<label>Naval cannon</label>
+		<description>A powerful cannon for use on a naval ship or possibly a tank, capable of sending exploding shells accurately at the enemy.</description>
 		<graphicData>
 			<texPath>Box/Tank_Cannon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -47,36 +47,38 @@
 		</graphicData>
 		<soundInteract>InteractPistol</soundInteract>
 		<statBases>
-            <WorkToMake>8000</WorkToMake>
-			<Mass>7.85</Mass>
-		    <MarketValue>1200</MarketValue>
-		    <AccuracyTouch>0.98</AccuracyTouch>
-            <AccuracyShort>0.79</AccuracyShort>
-            <AccuracyMedium>0.74</AccuracyMedium>
-            <AccuracyLong>0.83</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+            <WorkToMake>18640</WorkToMake>
+			<Mass>18.29</Mass>
+			<MarketValue>2400</MarketValue>
+			<AccuracyTouch>0.98</AccuracyTouch>
+            <AccuracyShort>0.74</AccuracyShort>
+            <AccuracyMedium>0.76</AccuracyMedium>
+            <AccuracyLong>0.78</AccuracyLong>
+			<RangedWeapon_Cooldown>5.83</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<Plasteel>40</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>350</Steel>
+			<Plasteel>93</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
 		</costList>
         <recipeMaker>
             <skillRequirements>
-                <Crafting>7</Crafting>
+                <Crafting>14</Crafting>
             </skillRequirements>
         </recipeMaker>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Cannon_Shell</defaultProjectile>
-				<warmupTime>2.6</warmupTime>
-				<range>80</range>
-				<minRange>8</minRange>				
+				<defaultProjectile>Naval_Shell</defaultProjectile>
+				<warmupTime>6.29</warmupTime>
+				<range>500</range>
+				<minRange>15</minRange>	
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>				
 				<soundCast>TankCannon_Fire</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>31</muzzleFlashScale>
+				<muzzleFlashScale>72</muzzleFlashScale>
 			</li>
 		</verbs>
 		<weaponTags>
